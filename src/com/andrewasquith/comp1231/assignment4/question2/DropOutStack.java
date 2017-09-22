@@ -210,29 +210,4 @@ public class DropOutStack<T> implements StackADT<T> {
 		
 		return representation;
 	}
-
-	/*
-	 * Debug version of toString that shows the actual layout of the array
-	 * and where the top element currently points to
-	 */
-	protected String printDebug() {
-		
-		String representation = "[DEBUG]<START OF ARRAY>" + System.lineSeparator();
-		
-		// debug version iterates whole array and prints null elements
-		for (int i = 0; i <= stack.length - 1; i++) {
-			representation += "[DEBUG]" + stack[i];
-			
-			//mark the current top location
-			if (top == i) {
-				representation += "[TOP]";
-			}
-
-			representation += System.lineSeparator();
-		}
-		representation += "[DEBUG]<END OF ARRAY>";
-		
-		return representation;
-	}
-
 }
